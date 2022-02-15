@@ -1,0 +1,17 @@
+<div>
+<div class="container">
+    <h2>Already converted values : </h2>
+
+    <div *ngFor="let item of oldResArray">
+        
+        <div class="panel panel-success">
+        <div class="panel-heading">  {{item.numberToConvert}} and the result is {{item.result}}</div>
+        <!-- <div class="panel-body">Panel Content</div> -->
+        </div>
+        <br>
+
+    </div>
+
+
+<app-gbsu-ftb-lai-form (submitNumberOutput)="convertNumber($event)"></app-gbsu-ftb-lai-form>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Gbsu Ftb Lai Instructions</h2>
+
+    <ul class="nav nav-pills">
+        <li role="presentation" [class.active]="currentInstruction === 'back'"
+        (click)="currentInstruction = 'back'">
+            <a>Back End</a>
+        </li>
+        <li role="presentation" [class.active]="currentInstruction === 'front'"
+        (click)="currentInstruction = 'front'">
+            <a>Front End</a>
+        </li>
+      <li role="presentation" [class.active]="currentInstruction === 'gbsuftblai'"
+          (click)="currentInstruction = 'gbsuftblai'">
+        <a>Gbsu Ftb Lai</a>
+      </li>
+    </ul>
+    <br/>
+    <ng-container *ngIf="currentInstruction === 'back'">
+        <app-back-end-instruction></app-back-end-instruction>
+    </ng-container>
+    <ng-container *ngIf="currentInstruction === 'front'">
+        <app-front-end-instruction></app-front-end-instruction>
+    </ng-container>
+    <ng-container *ngIf="currentInstruction === 'gbsuftblai'">
+      <app-gbsu-ftb-lai></app-gbsu-ftb-lai>
+    </ng-container>
+</div>
